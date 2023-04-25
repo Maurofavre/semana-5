@@ -9,10 +9,24 @@ function calcular() {
     let gasto4 =  parseInt( document.getElementById("gasto4").value);
 
     let mensajeGastos = participante1 + " " + participante2 + " " + participante3 + " " +participante4
+         console.log(mensajeGastos);
+         
+         
+    let sumaFinal = gasto1 + gasto2 + gasto3 + gasto4 ;
+         console.log("El gasto total fue de " + sumaFinal);
 
-    console.log(mensajeGastos); 
+         
+    let porCabeza = sumaFinal / 4
+    console.log("Cada uno debe poner " + porCabeza);
 
-     let sumaFinal = gasto1 + gasto2 + gasto3 + gasto4 ;
- 
-     console.log("El gasto total fue de " + sumaFinal);
+     function saldos(gasto, total) {
+        if (gasto < total){
+            console.log( "Debe pagar " + (total - gasto) );
+            
+        } else if(gasto > total) {
+            console.log("Tiene que recibir " + ( gasto - total) );
+        }
+     }
+     saldos(gasto1, porCabeza)
  }
+ 
